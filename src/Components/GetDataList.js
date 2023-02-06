@@ -22,10 +22,10 @@ class GetDataList extends Component {
             });
         },1000);
 
-        //  this.interval =  setInterval(()=>{
-        //       UserService.sendEmail()
-        //       console.log("Message sent");
-        //  },60000);
+         this.interval =  setInterval(()=>{
+              UserService.sendEmail()
+              console.log("Message sent");
+         },60000);
     }
 
     componentWillUnmount() {
