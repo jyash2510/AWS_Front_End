@@ -16,16 +16,16 @@ class GetDataList extends Component {
      }
 
      componentDidMount(){
-        //this.interval = setInterval(() => {
+        this.interval = setInterval(() => {
             UserService.getList().then((response) => {
                 this.setState({ users: response.data})
             });
-        //},1000);
+        },1000);
 
-        // this.interval =  setInterval(()=>{
-        //      UserService.sendEmail()
-        //      console.log("Message sent");
-        // },60000);
+        //  this.interval =  setInterval(()=>{
+        //       UserService.sendEmail()
+        //       console.log("Message sent");
+        //  },60000);
     }
 
     componentWillUnmount() {
