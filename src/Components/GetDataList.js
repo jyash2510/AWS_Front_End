@@ -92,10 +92,10 @@ class GetDataList extends Component {
                                 <tr key = {user.id}>
                                      <td>{user.id}</td>   
                                        
-                                     <td className={user.carbonDioxide > 15 ? 'bg-danger text-white' : " "}> {user.carbonDioxide}</td>   
-                                     <td className={user.carbonMonoxide > 15 ? 'bg-danger text-white' : " "}> {user.carbonMonoxide}</td>
-                                     <td className={user.nitrogenDioxide > 15 ? 'bg-danger text-white' : " "}> {user.nitrogenDioxide}</td>
-                                     <td className={user.sculptureDioxide > 15 ? 'bg-danger text-white' : " "}> {user.sculptureDioxide}</td>
+                                     <td className={user.carbonDioxide < 0 ? 'bg-dark text-white' : user.carbonDioxide > 15 ? 'bg-danger text-white' : " "}> {user.carbonDioxide}</td>   
+                                     <td className={user.carbonMonoxide < 0 ? 'bg-dark text-white' : user.carbonMonoxide > 15 ? 'bg-danger text-white' : " "}> {user.carbonMonoxide}</td>
+                                     <td className={user.nitrogenDioxide < 0 ? 'bg-dark text-white' : user.nitrogenDioxide > 15 ? 'bg-danger text-white' : " "}> {user.nitrogenDioxide}</td>
+                                     <td className={user.sculptureDioxide < 0 ? 'bg-dark text-white' : user.sculptureDioxide > 15 ? 'bg-danger text-white' : " "}> {user.sculptureDioxide}</td>
                                      <td> {user.year}</td>
                                      <td> {user.month}</td>
                                      <td> {user.day}</td>   

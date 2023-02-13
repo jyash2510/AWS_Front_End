@@ -36,7 +36,7 @@ class GetInvalidDustParticle extends Component {
                             this.state.InvalidDustParticle.map(
                                 (user,i) => 
                                 <tr key={i}>
-                                     <td className={user > 15 ? 'bg-danger text-white' : " "}> {user}</td>   
+                                     <td className={user < 0 ? 'bg-dark text-white' : user > 15 ? 'bg-danger text-white' : " "}> {user}</td>   
                                    
                                 </tr>
                             )
